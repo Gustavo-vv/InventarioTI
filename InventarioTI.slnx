@@ -1,0 +1,7 @@
+<Solution>
+  <Project Path="InterfaceInventario/InterfaceInventario.csproj" Id="a5c6303b-82ce-4152-be61-e2f1489a2519" />
+  <Project Path="InventarioTI.Application/InventarioTI.Application.csproj" />
+  <Project Path="InventarioTI.Domain/InventarioTI.Domain.csproj" />
+  <Project Path="InventarioTI.Infrastructure/InventarioTI.Infrastructure.csproj" />
+  <Project Path="InventarioTI.Teste/InventarioTI.Teste.csproj" />
+</Solution>
