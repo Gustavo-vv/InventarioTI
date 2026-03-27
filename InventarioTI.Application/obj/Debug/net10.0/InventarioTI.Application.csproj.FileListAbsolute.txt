@@ -1,0 +1,15 @@
+C:\Users\gustavo.vveloso\source\repos\InventarioTI\InventarioTI.Application\obj\Debug\net10.0\InventarioTI.Application.csproj.AssemblyReference.cache
+C:\Users\gustavo.vveloso\source\repos\InventarioTI\InventarioTI.Application\obj\Debug\net10.0\InventarioTI.Application.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\gustavo.vveloso\source\repos\InventarioTI\InventarioTI.Application\obj\Debug\net10.0\InventarioTI.Application.AssemblyInfoInputs.cache
+C:\Users\gustavo.vveloso\source\repos\InventarioTI\InventarioTI.Application\obj\Debug\net10.0\InventarioTI.Application.AssemblyInfo.cs
+C:\Users\gustavo.vveloso\source\repos\InventarioTI\InventarioTI.Application\obj\Debug\net10.0\InventarioTI.Application.csproj.CoreCompileInputs.cache
+C:\Users\gustavo.vveloso\source\repos\InventarioTI\InventarioTI.Application\bin\Debug\net10.0\InventarioTI.Application.deps.json
+C:\Users\gustavo.vveloso\source\repos\InventarioTI\InventarioTI.Application\bin\Debug\net10.0\InventarioTI.Application.dll
+C:\Users\gustavo.vveloso\source\repos\InventarioTI\InventarioTI.Application\bin\Debug\net10.0\InventarioTI.Application.pdb
+C:\Users\gustavo.vveloso\source\repos\InventarioTI\InventarioTI.Application\bin\Debug\net10.0\InventarioTI.Domain.dll
+C:\Users\gustavo.vveloso\source\repos\InventarioTI\InventarioTI.Application\bin\Debug\net10.0\InventarioTI.Domain.pdb
+C:\Users\gustavo.vveloso\source\repos\InventarioTI\InventarioTI.Application\obj\Debug\net10.0\Inventar.6331FA32.Up2Date
+C:\Users\gustavo.vveloso\source\repos\InventarioTI\InventarioTI.Application\obj\Debug\net10.0\InventarioTI.Application.dll
+C:\Users\gustavo.vveloso\source\repos\InventarioTI\InventarioTI.Application\obj\Debug\net10.0\refint\InventarioTI.Application.dll
+C:\Users\gustavo.vveloso\source\repos\InventarioTI\InventarioTI.Application\obj\Debug\net10.0\InventarioTI.Application.pdb
+C:\Users\gustavo.vveloso\source\repos\InventarioTI\InventarioTI.Application\obj\Debug\net10.0\ref\InventarioTI.Application.dll

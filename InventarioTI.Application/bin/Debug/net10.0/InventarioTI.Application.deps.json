@@ -1,0 +1,39 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v10.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v10.0": {
+      "InventarioTI.Application/1.0.0": {
+        "dependencies": {
+          "InventarioTI.Domain": "1.0.0"
+        },
+        "runtime": {
+          "InventarioTI.Application.dll": {}
+        }
+      },
+      "InventarioTI.Domain/1.0.0": {
+        "runtime": {
+          "InventarioTI.Domain.dll": {
+            "assemblyVersion": "1.0.0.0",
+            "fileVersion": "1.0.0.0"
+          }
+        }
+      }
+    }
+  },
+  "libraries": {
+    "InventarioTI.Application/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "InventarioTI.Domain/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}
