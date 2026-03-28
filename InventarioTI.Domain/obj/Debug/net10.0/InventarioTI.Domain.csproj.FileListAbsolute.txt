@@ -9,3 +9,15 @@ C:\Users\gustavo.vveloso\source\repos\InventarioTI\InventarioTI.Domain\obj\Debug
 C:\Users\gustavo.vveloso\source\repos\InventarioTI\InventarioTI.Domain\obj\Debug\net10.0\refint\InventarioTI.Domain.dll
 C:\Users\gustavo.vveloso\source\repos\InventarioTI\InventarioTI.Domain\obj\Debug\net10.0\InventarioTI.Domain.pdb
 C:\Users\gustavo.vveloso\source\repos\InventarioTI\InventarioTI.Domain\obj\Debug\net10.0\ref\InventarioTI.Domain.dll
+C:\Users\User\InventarioTIe\InventarioTI.Domain\bin\Debug\net10.0\InventarioTI.Domain.deps.json
+C:\Users\User\InventarioTIe\InventarioTI.Domain\bin\Debug\net10.0\InventarioTI.Domain.dll
+C:\Users\User\InventarioTIe\InventarioTI.Domain\bin\Debug\net10.0\InventarioTI.Domain.pdb
+C:\Users\User\InventarioTIe\InventarioTI.Domain\obj\Debug\net10.0\InventarioTI.Domain.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\User\InventarioTIe\InventarioTI.Domain\obj\Debug\net10.0\InventarioTI.Domain.AssemblyInfoInputs.cache
+C:\Users\User\InventarioTIe\InventarioTI.Domain\obj\Debug\net10.0\InventarioTI.Domain.AssemblyInfo.cs
+C:\Users\User\InventarioTIe\InventarioTI.Domain\obj\Debug\net10.0\InventarioTI.Domain.csproj.CoreCompileInputs.cache
+C:\Users\User\InventarioTIe\InventarioTI.Domain\obj\Debug\net10.0\InventarioTI.Domain.sourcelink.json
+C:\Users\User\InventarioTIe\InventarioTI.Domain\obj\Debug\net10.0\InventarioTI.Domain.dll
+C:\Users\User\InventarioTIe\InventarioTI.Domain\obj\Debug\net10.0\refint\InventarioTI.Domain.dll
+C:\Users\User\InventarioTIe\InventarioTI.Domain\obj\Debug\net10.0\InventarioTI.Domain.pdb
+C:\Users\User\InventarioTIe\InventarioTI.Domain\obj\Debug\net10.0\ref\InventarioTI.Domain.dll

@@ -1,4 +1,5 @@
-﻿using System;
+using System;
+using System.Linq;
 using InventarioTI.Application.Services;
 using InventarioTI.Domain.Entities;
 using InventarioTI.Infrastructure.Repositories;

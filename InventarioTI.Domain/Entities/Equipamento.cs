@@ -1,4 +1,6 @@
-﻿namespace InventarioTI.Domain.Entities
+using System;
+
+namespace InventarioTI.Domain.Entities
 {
     public class Equipamento
     {
@@ -7,5 +9,9 @@
         public string Tipo { get; set; }
         public string Marca { get; set; }
         public DateTime Data_Aquisicao { get; set; }
+        public int? ID_Funcionario { get; set; } // Pode ser anulável se estiver "no estoque"
+
+        // Helper string
+        public string NomeFuncionarioResponsavel { get; set; }
     }
 }

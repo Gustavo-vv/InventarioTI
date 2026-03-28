@@ -1,0 +1,31 @@
+## Ignorar arquivos compilados e de cache do Visual Studio
+
+# Pastas de compilação
+bin/
+obj/
+packages/
+
+# Arquivos de cache do Visual Studio
+.vs/
+*.user
+*.suo
+*.userosscache
+*.sln.docstates
+
+# Arquivos de release e debug gerados automaticamente
+[Dd]ebug/
+[Rr]elease/
+x64/
+x86/
+build/
+bld/
+
+# Arquivos Windows específicos
+Thumbs.db
+Desktop.ini
+
+# NuGet - não subir pacotes baixados (eles são restaurados automaticamente)
+*.nupkg
+**/[Pp]ackages/
+*.nuget.props
+*.nuget.targets

@@ -1,0 +1,17 @@
+C:\Users\User\InventarioTIe\InventarioTI.UI\obj\Debug\InventarioTI.UI.csproj.AssemblyReference.cache
+C:\Users\User\InventarioTIe\InventarioTI.UI\obj\Debug\InventarioTI.UI.Properties.Resources.resources
+C:\Users\User\InventarioTIe\InventarioTI.UI\obj\Debug\InventarioTI.UI.csproj.GenerateResource.cache
+C:\Users\User\InventarioTIe\InventarioTI.UI\obj\Debug\InventarioTI.UI.csproj.CoreCompileInputs.cache
+C:\Users\User\InventarioTIe\InventarioTI.UI\bin\Debug\InventarioTI.UI.exe.config
+C:\Users\User\InventarioTIe\InventarioTI.UI\bin\Debug\InventarioTI.UI.exe
+C:\Users\User\InventarioTIe\InventarioTI.UI\bin\Debug\InventarioTI.UI.pdb
+C:\Users\User\InventarioTIe\InventarioTI.UI\bin\Debug\InventarioTI.Application.dll
+C:\Users\User\InventarioTIe\InventarioTI.UI\bin\Debug\InventarioTI.Domain.dll
+C:\Users\User\InventarioTIe\InventarioTI.UI\bin\Debug\InventarioTI.Infrastructure.dll
+C:\Users\User\InventarioTIe\InventarioTI.UI\bin\Debug\System.Design.dll
+C:\Users\User\InventarioTIe\InventarioTI.UI\bin\Debug\InventarioTI.Application.pdb
+C:\Users\User\InventarioTIe\InventarioTI.UI\bin\Debug\InventarioTI.Domain.pdb
+C:\Users\User\InventarioTIe\InventarioTI.UI\bin\Debug\InventarioTI.Infrastructure.pdb
+C:\Users\User\InventarioTIe\InventarioTI.UI\obj\Debug\Inventar.62384225.Up2Date
+C:\Users\User\InventarioTIe\InventarioTI.UI\obj\Debug\InventarioTI.UI.exe
+C:\Users\User\InventarioTIe\InventarioTI.UI\obj\Debug\InventarioTI.UI.pdb
