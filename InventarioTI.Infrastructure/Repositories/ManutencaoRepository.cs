@@ -2,8 +2,8 @@ using InventarioTI.Domain.Entities;
 using InventarioTI.Domain.Interfaces;
 using InventarioTI.Infrastructure.Data;
 using System.Data.SqlClient;
-using System;
 using System.Collections.Generic;
+using System;
 
 namespace InventarioTI.Infrastructure.Repositories
 {
@@ -16,14 +16,15 @@ namespace InventarioTI.Infrastructure.Repositories
             using var conn = _connection.GetConnection();
             conn.Open();
 
-            string sql = @"INSERT INTO MANUTENCAO (ID_Funcionario, ID_Equipamento, Data_Manutencao, Descricao) 
-                           VALUES (@IDFunc, @IDEquip, @Data, @Desc)";
+            string sql = @"INSERT INTO dbo.MANUTENCAO 
+            (ID_Funcionario, ID_Equipamento, Data_Manutencao, Descricao) 
+            VALUES (@Funcionario, @Equipamento, @Data, @Descricao)";
 
             using var cmd = new SqlCommand(sql, conn);
-            cmd.Parameters.AddWithValue("@IDFunc", manutencao.ID_Funcionario);
-            cmd.Parameters.AddWithValue("@IDEquip", manutencao.ID_Equipamento);
+            cmd.Parameters.AddWithValue("@Funcionario", manutencao.ID_Funcionario > 0 ? manutencao.ID_Funcionario : 2); // Exemplo de funcionário default 2, como no EquipamentoRepository
+            cmd.Parameters.AddWithValue("@Equipamento", manutencao.ID_Equipamento);
             cmd.Parameters.AddWithValue("@Data", manutencao.Data_Manutencao);
-            cmd.Parameters.AddWithValue("@Desc", manutencao.Descricao);
+            cmd.Parameters.AddWithValue("@Descricao", manutencao.Descricao);
 
             cmd.ExecuteNonQuery();
         }
@@ -35,13 +36,15 @@ namespace InventarioTI.Infrastructure.Repositories
             using var conn = _connection.GetConnection();
             conn.Open();
 
-            string sql = @"SELECT M.Registro_Manutencao, M.Data_Manutencao, M.Descricao, 
-                                  M.ID_Funcionario, F.Nome as NomeFuncionario,
-                                  M.ID_Equipamento, E.Nome_Equipamento as NomeEquipamento
-                           FROM MANUTENCAO M
-                           INNER JOIN FUNCIONARIOS F ON M.ID_Funcionario = F.ID_Funcionario
-                           INNER JOIN EQUIPAMENTOS E ON M.ID_Equipamento = E.ID_Equipamento
-                           ORDER BY M.Data_Manutencao DESC";
+            string sql = @"
+                SELECT 
+                    M.Registro_Manutencao, M.ID_Funcionario, M.ID_Equipamento, 
+                    M.Data_Manutencao, M.Descricao,
+                    F.Nome AS NomeFuncionario,
+                    E.Nome_Equipamento AS NomeEquipamento
+                FROM dbo.MANUTENCAO M
+                INNER JOIN dbo.FUNCIONARIOS F ON M.ID_Funcionario = F.ID_Funcionario
+                INNER JOIN dbo.EQUIPAMENTOS E ON M.ID_Equipamento = E.ID_Equipamento";
 
             using var cmd = new SqlCommand(sql, conn);
             using var reader = cmd.ExecuteReader();
@@ -51,24 +54,88 @@ namespace InventarioTI.Infrastructure.Repositories
                 lista.Add(new Manutencao
                 {
                     Registro_Manutencao = (int)reader["Registro_Manutencao"],
-                    Data_Manutencao = (DateTime)reader["Data_Manutencao"],
+                    ID_Funcionario = reader["ID_Funcionario"] != DBNull.Value ? (int)reader["ID_Funcionario"] : 0,
+                    ID_Equipamento = reader["ID_Equipamento"] != DBNull.Value ? (int)reader["ID_Equipamento"] : 0,
+                    Data_Manutencao = reader["Data_Manutencao"] != DBNull.Value ? (DateTime)reader["Data_Manutencao"] : DateTime.MinValue,
                     Descricao = reader["Descricao"].ToString(),
-                    ID_Funcionario = (int)reader["ID_Funcionario"],
-                    NomeFuncionario = reader["NomeFuncionario"].ToString(),
-                    ID_Equipamento = (int)reader["ID_Equipamento"],
-                    NomeEquipamento = reader["NomeEquipamento"].ToString()
+                    NomeFuncionario = reader["NomeFuncionario"] != DBNull.Value ? reader["NomeFuncionario"].ToString() : "N/D",
+                    NomeEquipamento = reader["NomeEquipamento"] != DBNull.Value ? reader["NomeEquipamento"].ToString() : "N/D"
                 });
             }
+            conn.Close();
             return lista;
         }
 
-        public void Remover(int id)
+        public List<Manutencao> ListarPorEquipamento(int equipamentoId)
+        {
+            var lista = new List<Manutencao>();
+
+            using var conn = _connection.GetConnection();
+            conn.Open();
+
+            string sql = @"
+                SELECT 
+                    M.Registro_Manutencao, M.ID_Funcionario, M.ID_Equipamento, 
+                    M.Data_Manutencao, M.Descricao,
+                    F.Nome AS NomeFuncionario,
+                    E.Nome_Equipamento AS NomeEquipamento
+                FROM dbo.MANUTENCAO M
+                INNER JOIN dbo.FUNCIONARIOS F ON M.ID_Funcionario = F.ID_Funcionario
+                INNER JOIN dbo.EQUIPAMENTOS E ON M.ID_Equipamento = E.ID_Equipamento
+                WHERE M.ID_Equipamento = @EquipamentoId";
+
+            using var cmd = new SqlCommand(sql, conn);
+            cmd.Parameters.AddWithValue("@EquipamentoId", equipamentoId);
+            using var reader = cmd.ExecuteReader();
+
+            while (reader.Read())
+            {
+                lista.Add(new Manutencao
+                {
+                    Registro_Manutencao = (int)reader["Registro_Manutencao"],
+                    ID_Funcionario = reader["ID_Funcionario"] != DBNull.Value ? (int)reader["ID_Funcionario"] : 0,
+                    ID_Equipamento = reader["ID_Equipamento"] != DBNull.Value ? (int)reader["ID_Equipamento"] : 0,
+                    Data_Manutencao = reader["Data_Manutencao"] != DBNull.Value ? (DateTime)reader["Data_Manutencao"] : DateTime.MinValue,
+                    Descricao = reader["Descricao"].ToString(),
+                    NomeFuncionario = reader["NomeFuncionario"] != DBNull.Value ? reader["NomeFuncionario"].ToString() : "N/D",
+                    NomeEquipamento = reader["NomeEquipamento"] != DBNull.Value ? reader["NomeEquipamento"].ToString() : "N/D"
+                });
+            }
+            conn.Close();
+            return lista;
+        }
+
+        public void Atualizar(Manutencao manutencao)
         {
             using var conn = _connection.GetConnection();
             conn.Open();
-            string sql = "DELETE FROM MANUTENCAO WHERE Registro_Manutencao = @ID";
+
+            string sql = @"UPDATE dbo.MANUTENCAO 
+                           SET ID_Funcionario = @Funcionario,
+                               ID_Equipamento = @Equipamento,
+                               Data_Manutencao = @Data,
+                               Descricao = @Descricao
+                           WHERE Registro_Manutencao = @Id";
+
             using var cmd = new SqlCommand(sql, conn);
-            cmd.Parameters.AddWithValue("@ID", id);
+            cmd.Parameters.AddWithValue("@Id", manutencao.Registro_Manutencao);
+            cmd.Parameters.AddWithValue("@Funcionario", manutencao.ID_Funcionario > 0 ? manutencao.ID_Funcionario : 2);
+            cmd.Parameters.AddWithValue("@Equipamento", manutencao.ID_Equipamento);
+            cmd.Parameters.AddWithValue("@Data", manutencao.Data_Manutencao);
+            cmd.Parameters.AddWithValue("@Descricao", manutencao.Descricao);
+
+            cmd.ExecuteNonQuery();
+        }
+
+        public void Remover(int registroManutencaoId)
+        {
+            using var conn = _connection.GetConnection();
+            conn.Open();
+
+            string sql = "DELETE FROM dbo.MANUTENCAO WHERE Registro_Manutencao = @Id";
+
+            using var cmd = new SqlCommand(sql, conn);
+            cmd.Parameters.AddWithValue("@Id", registroManutencaoId);
             cmd.ExecuteNonQuery();
         }
     }

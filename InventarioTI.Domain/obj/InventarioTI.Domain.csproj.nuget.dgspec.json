@@ -1,23 +1,23 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\User\\InventarioTIe\\InventarioTI.Domain\\InventarioTI.Domain.csproj": {}
+    "C:\\Users\\gustavo.vveloso\\OneDrive - SENAC - SP\\Área de Trabalho\\do\\InventarioTI.Domain\\InventarioTI.Domain.csproj": {}
   },
   "projects": {
-    "C:\\Users\\User\\InventarioTIe\\InventarioTI.Domain\\InventarioTI.Domain.csproj": {
+    "C:\\Users\\gustavo.vveloso\\OneDrive - SENAC - SP\\Área de Trabalho\\do\\InventarioTI.Domain\\InventarioTI.Domain.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\User\\InventarioTIe\\InventarioTI.Domain\\InventarioTI.Domain.csproj",
+        "projectUniqueName": "C:\\Users\\gustavo.vveloso\\OneDrive - SENAC - SP\\Área de Trabalho\\do\\InventarioTI.Domain\\InventarioTI.Domain.csproj",
         "projectName": "InventarioTI.Domain",
-        "projectPath": "C:\\Users\\User\\InventarioTIe\\InventarioTI.Domain\\InventarioTI.Domain.csproj",
-        "packagesPath": "C:\\Users\\User\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\User\\InventarioTIe\\InventarioTI.Domain\\obj\\",
+        "projectPath": "C:\\Users\\gustavo.vveloso\\OneDrive - SENAC - SP\\Área de Trabalho\\do\\InventarioTI.Domain\\InventarioTI.Domain.csproj",
+        "packagesPath": "C:\\Users\\gustavo.vveloso\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\gustavo.vveloso\\OneDrive - SENAC - SP\\Área de Trabalho\\do\\InventarioTI.Domain\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\User\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\gustavo.vveloso\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
@@ -45,12 +45,12 @@
           "auditLevel": "low",
           "auditMode": "direct"
         },
-        "SdkAnalysisLevel": "10.0.200"
+        "SdkAnalysisLevel": "10.0.100"
       },
       "frameworks": {
         "net472": {
           "targetAlias": "net472",
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\10.0.201\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\10.0.103\\RuntimeIdentifierGraph.json"
         }
       }
     }

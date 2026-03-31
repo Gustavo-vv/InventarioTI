@@ -161,23 +161,23 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\User\\.nuget\\packages\\": {},
+    "C:\\Users\\gustavo.vveloso\\.nuget\\packages\\": {},
     "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\User\\InventarioTIe\\InventarioTI.Infrastructure\\InventarioTI.Infrastructure.csproj",
+      "projectUniqueName": "C:\\Users\\gustavo.vveloso\\OneDrive - SENAC - SP\\Área de Trabalho\\do\\InventarioTI.Infrastructure\\InventarioTI.Infrastructure.csproj",
       "projectName": "InventarioTI.Infrastructure",
-      "projectPath": "C:\\Users\\User\\InventarioTIe\\InventarioTI.Infrastructure\\InventarioTI.Infrastructure.csproj",
-      "packagesPath": "C:\\Users\\User\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\User\\InventarioTIe\\InventarioTI.Infrastructure\\obj\\",
+      "projectPath": "C:\\Users\\gustavo.vveloso\\OneDrive - SENAC - SP\\Área de Trabalho\\do\\InventarioTI.Infrastructure\\InventarioTI.Infrastructure.csproj",
+      "packagesPath": "C:\\Users\\gustavo.vveloso\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\gustavo.vveloso\\OneDrive - SENAC - SP\\Área de Trabalho\\do\\InventarioTI.Infrastructure\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
       ],
       "configFilePaths": [
-        "C:\\Users\\User\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\gustavo.vveloso\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
@@ -193,11 +193,11 @@
         "net472": {
           "targetAlias": "net472",
           "projectReferences": {
-            "C:\\Users\\User\\InventarioTIe\\InventarioTI.Application\\InventarioTI.Application.csproj": {
-              "projectPath": "C:\\Users\\User\\InventarioTIe\\InventarioTI.Application\\InventarioTI.Application.csproj"
+            "C:\\Users\\gustavo.vveloso\\OneDrive - SENAC - SP\\Área de Trabalho\\do\\InventarioTI.Application\\InventarioTI.Application.csproj": {
+              "projectPath": "C:\\Users\\gustavo.vveloso\\OneDrive - SENAC - SP\\Área de Trabalho\\do\\InventarioTI.Application\\InventarioTI.Application.csproj"
             },
-            "C:\\Users\\User\\InventarioTIe\\InventarioTI.Domain\\InventarioTI.Domain.csproj": {
-              "projectPath": "C:\\Users\\User\\InventarioTIe\\InventarioTI.Domain\\InventarioTI.Domain.csproj"
+            "C:\\Users\\gustavo.vveloso\\OneDrive - SENAC - SP\\Área de Trabalho\\do\\InventarioTI.Domain\\InventarioTI.Domain.csproj": {
+              "projectPath": "C:\\Users\\gustavo.vveloso\\OneDrive - SENAC - SP\\Área de Trabalho\\do\\InventarioTI.Domain\\InventarioTI.Domain.csproj"
             }
           }
         }
@@ -212,7 +212,7 @@
         "auditLevel": "low",
         "auditMode": "direct"
       },
-      "SdkAnalysisLevel": "10.0.200"
+      "SdkAnalysisLevel": "10.0.100"
     },
     "frameworks": {
       "net472": {
@@ -223,7 +223,7 @@
             "version": "[4.8.6, )"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\10.0.201\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\10.0.103\\RuntimeIdentifierGraph.json"
       }
     }
   }

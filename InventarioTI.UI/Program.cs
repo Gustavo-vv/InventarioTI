@@ -16,7 +16,15 @@ namespace InventarioTI.UI
         {
             System.Windows.Forms.Application.EnableVisualStyles();
             System.Windows.Forms.Application.SetCompatibleTextRenderingDefault(false);
-            System.Windows.Forms.Application.Run(new Form1());
+            
+            using (FormLogin login = new FormLogin())
+            {
+                if (login.ShowDialog() == DialogResult.OK)
+                {
+                    // Apenas se autenticar com sucesso a tela 1 iniciará
+                    System.Windows.Forms.Application.Run(new Form1());
+                }
+            }
         }
     }
 }

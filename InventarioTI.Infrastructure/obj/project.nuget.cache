@@ -1,10 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "Ib6D01KGVtY=",
+  "dgSpecHash": "7g/h94GJsf0=",
   "success": true,
-  "projectFilePath": "C:\\Users\\User\\InventarioTIe\\InventarioTI.Infrastructure\\InventarioTI.Infrastructure.csproj",
+  "projectFilePath": "C:\\Users\\gustavo.vveloso\\OneDrive - SENAC - SP\\Área de Trabalho\\do\\InventarioTI.Infrastructure\\InventarioTI.Infrastructure.csproj",
   "expectedPackageFiles": [
-    "C:\\Users\\User\\.nuget\\packages\\system.data.sqlclient\\4.8.6\\system.data.sqlclient.4.8.6.nupkg.sha512"
+    "C:\\Users\\gustavo.vveloso\\.nuget\\packages\\system.data.sqlclient\\4.8.6\\system.data.sqlclient.4.8.6.nupkg.sha512"
   ],
   "logs": []
 }

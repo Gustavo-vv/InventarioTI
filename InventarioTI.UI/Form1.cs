@@ -14,6 +14,13 @@ namespace InventarioTI.UI
         private void Form1_Load(object sender, EventArgs e)
         {
             AbrirControle(new UcEquipamentos());
+
+            // --- CONTROLE DE ACESSO ---
+            if (!InventarioTI.Application.Sessao.IsAdmin)
+            {
+                btnMenuFuncionarios.Visible = false;
+                // Exemplo: O usuário comum não acessa o "Painel de RH"
+            }
         }
 
         private void btnMenuEquipamentos_Click(object sender, EventArgs e)

@@ -22,6 +22,12 @@ namespace InventarioTI.UI.UserControls
         {
             CarregarComboboxFuncionarios();
             CarregarDados();
+            
+            // Controle de Acesso para Exclusão
+            if (!InventarioTI.Application.Sessao.IsAdmin)
+            {
+                btnRemover.Visible = false;
+            }
         }
 
         private void CarregarComboboxFuncionarios()
@@ -115,14 +121,43 @@ namespace InventarioTI.UI.UserControls
         {
             try
             {
-                if (int.TryParse(txtId.Text, out int id))
+                int idParaRemover = 0;
+
+                // Tenta pegar o ID pelo campo de texto (se o usuário deu dois cliques)
+                if (!string.IsNullOrEmpty(txtId.Text) && int.TryParse(txtId.Text, out int idTexto))
                 {
-                    _equipService.Remover(id);
-                    CarregarDados();
-                    Limpar();
+                    idParaRemover = idTexto;
+                }
+                // Senão, tentar pegar direto da linha selecionada do Grid
+                else if (dgvEquipamentos.CurrentRow != null && dgvEquipamentos.CurrentRow.Index >= 0)
+                {
+                    var idObj = dgvEquipamentos.CurrentRow.Cells["Id"].Value;
+                    if (idObj != null)
+                    {
+                        idParaRemover = Convert.ToInt32(idObj);
+                    }
+                }
+
+                if (idParaRemover > 0)
+                {
+                    DialogResult resultado = MessageBox.Show(
+                        "Tem certeza que deseja deletar o equipamento selecionado?", 
+                        "Confirmação", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+
+                    if (resultado == DialogResult.Yes)
+                    {
+                        _equipService.Remover(idParaRemover);
+                        CarregarDados();
+                        Limpar();
+                        MessageBox.Show("Equipamento removido com sucesso!");
+                    }
+                }
+                else
+                {
+                    MessageBox.Show("Por favor, selecione um equipamento na lista (Dê um clique na linha) ou dê um duplo clique para carregar o ID, antes de clicar em Remover.");
                 }
             }
-            catch (Exception ex) { MessageBox.Show(ex.Message); }
+            catch (Exception ex) { MessageBox.Show("Erro ao remover: " + ex.Message); }
         }
 
         private void dgvEquipamentos_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
