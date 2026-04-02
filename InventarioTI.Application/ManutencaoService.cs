@@ -21,7 +21,7 @@ namespace InventarioTI.Application.Services
         {
             if (string.IsNullOrEmpty(manutencao.Descricao))
                 throw new Exception("Descrição da manutenção é obrigatória.");
-            
+
             if (manutencao.ID_Equipamento <= 0)
                 throw new Exception("Equipamento inválido.");
 
@@ -47,23 +47,6 @@ namespace InventarioTI.Application.Services
             return _repository.ListarPorEquipamento(equipamentoId);
         }
 
-        public void Atualizar(Manutencao manutencao)
-        {
-            if (manutencao.Registro_Manutencao <= 0)
-                throw new Exception("ID de registro de manutenção inválido.");
 
-            if (string.IsNullOrEmpty(manutencao.Descricao))
-                throw new Exception("Descrição da manutenção é obrigatória.");
-
-            _repository.Atualizar(manutencao);
-        }
-
-        public void Remover(int registroManutencaoId)
-        {
-            if (registroManutencaoId <= 0)
-                throw new Exception("ID de registro de manutenção inválido.");
-
-            _repository.Remover(registroManutencaoId);
-        }
     }
 }

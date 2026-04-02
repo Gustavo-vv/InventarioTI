@@ -11,23 +11,6 @@ namespace InventarioTI.Infrastructure.Repositories
     {
         private readonly DbConnection _connection = new DbConnection();
 
-        public void Adicionar(Funcionario funcionario)
-        {
-            using var conn = _connection.GetConnection();
-            conn.Open();
-
-            string sql = @"INSERT INTO FUNCIONARIOS (Nome, Cargo, Email, ID_Setor) 
-                           VALUES (@Nome, @Cargo, @Email, @ID_Setor)";
-
-            using var cmd = new SqlCommand(sql, conn);
-            cmd.Parameters.AddWithValue("@Nome", funcionario.Nome);
-            cmd.Parameters.AddWithValue("@Cargo", funcionario.Cargo);
-            cmd.Parameters.AddWithValue("@Email", (object)funcionario.Email ?? DBNull.Value);
-            cmd.Parameters.AddWithValue("@ID_Setor", (object)funcionario.ID_Setor ?? DBNull.Value);
-
-            cmd.ExecuteNonQuery();
-        }
-
         public List<Funcionario> Listar()
         {
             var lista = new List<Funcionario>();
@@ -59,33 +42,8 @@ namespace InventarioTI.Infrastructure.Repositories
             return lista;
         }
 
-        public void Atualizar(Funcionario funcionario)
-        {
-            using var conn = _connection.GetConnection();
-            conn.Open();
 
-            string sql = @"UPDATE FUNCIONARIOS 
-                           SET Nome = @Nome, Cargo = @Cargo, Email = @Email, ID_Setor = @ID_Setor
-                           WHERE ID_Funcionario = @ID";
 
-            using var cmd = new SqlCommand(sql, conn);
-            cmd.Parameters.AddWithValue("@ID", funcionario.ID_Funcionario);
-            cmd.Parameters.AddWithValue("@Nome", funcionario.Nome);
-            cmd.Parameters.AddWithValue("@Cargo", funcionario.Cargo);
-            cmd.Parameters.AddWithValue("@Email", (object)funcionario.Email ?? DBNull.Value);
-            cmd.Parameters.AddWithValue("@ID_Setor", (object)funcionario.ID_Setor ?? DBNull.Value);
 
-            cmd.ExecuteNonQuery();
-        }
-
-        public void Remover(int id)
-        {
-            using var conn = _connection.GetConnection();
-            conn.Open();
-            string sql = "DELETE FROM FUNCIONARIOS WHERE ID_Funcionario = @ID";
-            using var cmd = new SqlCommand(sql, conn);
-            cmd.Parameters.AddWithValue("@ID", id);
-            cmd.ExecuteNonQuery();
-        }
     }
 }

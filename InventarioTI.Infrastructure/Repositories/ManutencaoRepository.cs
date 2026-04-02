@@ -104,39 +104,5 @@ namespace InventarioTI.Infrastructure.Repositories
             conn.Close();
             return lista;
         }
-
-        public void Atualizar(Manutencao manutencao)
-        {
-            using var conn = _connection.GetConnection();
-            conn.Open();
-
-            string sql = @"UPDATE dbo.MANUTENCAO 
-                           SET ID_Funcionario = @Funcionario,
-                               ID_Equipamento = @Equipamento,
-                               Data_Manutencao = @Data,
-                               Descricao = @Descricao
-                           WHERE Registro_Manutencao = @Id";
-
-            using var cmd = new SqlCommand(sql, conn);
-            cmd.Parameters.AddWithValue("@Id", manutencao.Registro_Manutencao);
-            cmd.Parameters.AddWithValue("@Funcionario", manutencao.ID_Funcionario > 0 ? manutencao.ID_Funcionario : 2);
-            cmd.Parameters.AddWithValue("@Equipamento", manutencao.ID_Equipamento);
-            cmd.Parameters.AddWithValue("@Data", manutencao.Data_Manutencao);
-            cmd.Parameters.AddWithValue("@Descricao", manutencao.Descricao);
-
-            cmd.ExecuteNonQuery();
-        }
-
-        public void Remover(int registroManutencaoId)
-        {
-            using var conn = _connection.GetConnection();
-            conn.Open();
-
-            string sql = "DELETE FROM dbo.MANUTENCAO WHERE Registro_Manutencao = @Id";
-
-            using var cmd = new SqlCommand(sql, conn);
-            cmd.Parameters.AddWithValue("@Id", registroManutencaoId);
-            cmd.ExecuteNonQuery();
-        }
     }
 }

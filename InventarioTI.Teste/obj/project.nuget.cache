@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "vBz2NVwTNT4=",
+  "dgSpecHash": "jEAa59l0Olc=",
   "success": true,
-  "projectFilePath": "C:\\Users\\gustavo.vveloso\\OneDrive - SENAC - SP\\Área de Trabalho\\do\\InventarioTI.Teste\\InventarioTI.Teste.csproj",
+  "projectFilePath": "C:\\Users\\gustavo.vveloso\\OneDrive - SENAC - SP\\Documentos\\InventarioTI\\InventarioTI.Teste\\InventarioTI.Teste.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\gustavo.vveloso\\.nuget\\packages\\system.data.sqlclient\\4.8.6\\system.data.sqlclient.4.8.6.nupkg.sha512"
   ],

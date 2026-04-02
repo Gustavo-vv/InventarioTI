@@ -8,7 +8,7 @@ namespace InventarioTI.Domain.Interfaces
         void Adicionar(Manutencao manutencao);
         List<Manutencao> ListarPorEquipamento(int equipamentoId);
         List<Manutencao> Listar();
-        void Atualizar(Manutencao manutencao);
-        void Remover(int registroManutencaoId);
+        
+        
     }
 }

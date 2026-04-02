@@ -14,11 +14,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\gustavo.vveloso\\OneDrive - SENAC - SP\\Área de Trabalho\\do\\InventarioTI.Domain\\InventarioTI.Domain.csproj",
+      "projectUniqueName": "C:\\Users\\gustavo.vveloso\\OneDrive - SENAC - SP\\Documentos\\InventarioTI\\InventarioTI.Domain\\InventarioTI.Domain.csproj",
       "projectName": "InventarioTI.Domain",
-      "projectPath": "C:\\Users\\gustavo.vveloso\\OneDrive - SENAC - SP\\Área de Trabalho\\do\\InventarioTI.Domain\\InventarioTI.Domain.csproj",
+      "projectPath": "C:\\Users\\gustavo.vveloso\\OneDrive - SENAC - SP\\Documentos\\InventarioTI\\InventarioTI.Domain\\InventarioTI.Domain.csproj",
       "packagesPath": "C:\\Users\\gustavo.vveloso\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\gustavo.vveloso\\OneDrive - SENAC - SP\\Área de Trabalho\\do\\InventarioTI.Domain\\obj\\",
+      "outputPath": "C:\\Users\\gustavo.vveloso\\OneDrive - SENAC - SP\\Documentos\\InventarioTI\\InventarioTI.Domain\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

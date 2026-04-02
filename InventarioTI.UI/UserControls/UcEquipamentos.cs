@@ -28,6 +28,10 @@ namespace InventarioTI.UI.UserControls
             {
                 btnRemover.Visible = false;
             }
+            else
+            {
+                btnRemover.Visible = true;
+            }
         }
 
         private void CarregarComboboxFuncionarios()
