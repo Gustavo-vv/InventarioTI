@@ -24,25 +24,12 @@ namespace InventarioTI.UI.UserControls
 
         private void UcManutencoes_Load(object sender, EventArgs e)
         {
-            try 
-            {
                 CarregarEquipamentos();
                 CarregarTecnicos();
                 CarregarTabela();
-                
-                // Controle de Acesso (RBAC):
-                if (!Sessao.IsAdmin)
-                {
-                    btnSalvar.Visible = false;
-                    txtNovaDescricao.Enabled = false;
-                    cmbEquipamentos.Enabled = false;
-                    cmbTecnico.Enabled = false;
-                    dtNovaData.Enabled = false;
-                }
-            } 
-            catch { }
         }
-
+           
+        
         private void CarregarEquipamentos()
         {
             var equip = _equipamentoService.Listar();
@@ -58,12 +45,7 @@ namespace InventarioTI.UI.UserControls
             cmbTecnico.DataSource = tecs;
             cmbTecnico.DisplayMember = "NomeComSetor";
             cmbTecnico.ValueMember = "ID_Funcionario";
-            
-            // Auto selecionar o usuário logado para facilitar!
-            if (Sessao.UsuarioLogado != null) 
-            {
-                cmbTecnico.SelectedValue = Sessao.UsuarioLogado.ID_Funcionario;
-            }
+           
         }
 
         private void CarregarTabela()

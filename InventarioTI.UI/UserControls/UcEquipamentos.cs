@@ -132,16 +132,7 @@ namespace InventarioTI.UI.UserControls
                 {
                     idParaRemover = idTexto;
                 }
-                // Senão, tentar pegar direto da linha selecionada do Grid
-                else if (dgvEquipamentos.CurrentRow != null && dgvEquipamentos.CurrentRow.Index >= 0)
-                {
-                    var idObj = dgvEquipamentos.CurrentRow.Cells["Id"].Value;
-                    if (idObj != null)
-                    {
-                        idParaRemover = Convert.ToInt32(idObj);
-                    }
-                }
-
+  
                 if (idParaRemover > 0)
                 {
                     DialogResult resultado = MessageBox.Show(

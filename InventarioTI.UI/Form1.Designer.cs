@@ -19,10 +19,10 @@ namespace InventarioTI.UI
             this.components = new System.ComponentModel.Container();
             this.guna2BorderlessForm1 = new Guna.UI2.WinForms.Guna2BorderlessForm(this.components);
             this.pnlSidebar = new Guna.UI2.WinForms.Guna2Panel();
-            this.lblLogo = new System.Windows.Forms.Label();
             this.btnMenuManutencoes = new Guna.UI2.WinForms.Guna2Button();
             this.btnMenuFuncionarios = new Guna.UI2.WinForms.Guna2Button();
             this.btnMenuEquipamentos = new Guna.UI2.WinForms.Guna2Button();
+            this.lblLogo = new System.Windows.Forms.Label();
             this.pnlTop = new Guna.UI2.WinForms.Guna2Panel();
             this.btnFechar = new Guna.UI2.WinForms.Guna2ControlBox();
             this.pnlContent = new Guna.UI2.WinForms.Guna2Panel();
@@ -50,16 +50,37 @@ namespace InventarioTI.UI
             this.pnlSidebar.Size = new System.Drawing.Size(250, 720);
             this.pnlSidebar.TabIndex = 0;
             // 
-            // lblLogo
+            // btnMenuManutencoes
             // 
-            this.lblLogo.AutoSize = true;
-            this.lblLogo.Font = new System.Drawing.Font("Segoe UI", 16F, System.Drawing.FontStyle.Bold);
-            this.lblLogo.ForeColor = System.Drawing.Color.White;
-            this.lblLogo.Location = new System.Drawing.Point(25, 30);
-            this.lblLogo.Name = "lblLogo";
-            this.lblLogo.Size = new System.Drawing.Size(149, 30);
-            this.lblLogo.TabIndex = 0;
-            this.lblLogo.Text = "ITAM System";
+            this.btnMenuManutencoes.ButtonMode = Guna.UI2.WinForms.Enums.ButtonMode.RadioButton;
+            this.btnMenuManutencoes.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(120)))), ((int)(((byte)(212)))));
+            this.btnMenuManutencoes.FillColor = System.Drawing.Color.Transparent;
+            this.btnMenuManutencoes.Font = new System.Drawing.Font("Segoe UI Semibold", 11.25F, System.Drawing.FontStyle.Bold);
+            this.btnMenuManutencoes.ForeColor = System.Drawing.Color.White;
+            this.btnMenuManutencoes.Location = new System.Drawing.Point(0, 220);
+            this.btnMenuManutencoes.Name = "btnMenuManutencoes";
+            this.btnMenuManutencoes.Size = new System.Drawing.Size(250, 50);
+            this.btnMenuManutencoes.TabIndex = 3;
+            this.btnMenuManutencoes.Text = "Manutenções (OS)";
+            this.btnMenuManutencoes.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.btnMenuManutencoes.TextOffset = new System.Drawing.Point(20, 0);
+            this.btnMenuManutencoes.Click += new System.EventHandler(this.btnMenuManutencoes_Click);
+            // 
+            // btnMenuFuncionarios
+            // 
+            this.btnMenuFuncionarios.ButtonMode = Guna.UI2.WinForms.Enums.ButtonMode.RadioButton;
+            this.btnMenuFuncionarios.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(120)))), ((int)(((byte)(212)))));
+            this.btnMenuFuncionarios.FillColor = System.Drawing.Color.Transparent;
+            this.btnMenuFuncionarios.Font = new System.Drawing.Font("Segoe UI Semibold", 11.25F, System.Drawing.FontStyle.Bold);
+            this.btnMenuFuncionarios.ForeColor = System.Drawing.Color.White;
+            this.btnMenuFuncionarios.Location = new System.Drawing.Point(0, 170);
+            this.btnMenuFuncionarios.Name = "btnMenuFuncionarios";
+            this.btnMenuFuncionarios.Size = new System.Drawing.Size(250, 50);
+            this.btnMenuFuncionarios.TabIndex = 2;
+            this.btnMenuFuncionarios.Text = "Funcionários e Setores";
+            this.btnMenuFuncionarios.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.btnMenuFuncionarios.TextOffset = new System.Drawing.Point(20, 0);
+            this.btnMenuFuncionarios.Click += new System.EventHandler(this.btnMenuFuncionarios_Click);
             // 
             // btnMenuEquipamentos
             // 
@@ -78,37 +99,16 @@ namespace InventarioTI.UI
             this.btnMenuEquipamentos.TextOffset = new System.Drawing.Point(20, 0);
             this.btnMenuEquipamentos.Click += new System.EventHandler(this.btnMenuEquipamentos_Click);
             // 
-            // btnMenuFuncionarios
+            // lblLogo
             // 
-            this.btnMenuFuncionarios.ButtonMode = Guna.UI2.WinForms.Enums.ButtonMode.RadioButton;
-            this.btnMenuFuncionarios.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(120)))), ((int)(((byte)(212)))));
-            this.btnMenuFuncionarios.FillColor = System.Drawing.Color.Transparent;
-            this.btnMenuFuncionarios.Font = new System.Drawing.Font("Segoe UI Semibold", 11.25F, System.Drawing.FontStyle.Bold);
-            this.btnMenuFuncionarios.ForeColor = System.Drawing.Color.White;
-            this.btnMenuFuncionarios.Location = new System.Drawing.Point(0, 170);
-            this.btnMenuFuncionarios.Name = "btnMenuFuncionarios";
-            this.btnMenuFuncionarios.Size = new System.Drawing.Size(250, 50);
-            this.btnMenuFuncionarios.TabIndex = 2;
-            this.btnMenuFuncionarios.Text = "Funcionários e Setores";
-            this.btnMenuFuncionarios.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.btnMenuFuncionarios.TextOffset = new System.Drawing.Point(20, 0);
-            this.btnMenuFuncionarios.Click += new System.EventHandler(this.btnMenuFuncionarios_Click);
-            // 
-            // btnMenuManutencoes
-            // 
-            this.btnMenuManutencoes.ButtonMode = Guna.UI2.WinForms.Enums.ButtonMode.RadioButton;
-            this.btnMenuManutencoes.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(120)))), ((int)(((byte)(212)))));
-            this.btnMenuManutencoes.FillColor = System.Drawing.Color.Transparent;
-            this.btnMenuManutencoes.Font = new System.Drawing.Font("Segoe UI Semibold", 11.25F, System.Drawing.FontStyle.Bold);
-            this.btnMenuManutencoes.ForeColor = System.Drawing.Color.White;
-            this.btnMenuManutencoes.Location = new System.Drawing.Point(0, 220);
-            this.btnMenuManutencoes.Name = "btnMenuManutencoes";
-            this.btnMenuManutencoes.Size = new System.Drawing.Size(250, 50);
-            this.btnMenuManutencoes.TabIndex = 3;
-            this.btnMenuManutencoes.Text = "Manutenções (OS)";
-            this.btnMenuManutencoes.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.btnMenuManutencoes.TextOffset = new System.Drawing.Point(20, 0);
-            this.btnMenuManutencoes.Click += new System.EventHandler(this.btnMenuManutencoes_Click);
+            this.lblLogo.AutoSize = true;
+            this.lblLogo.Font = new System.Drawing.Font("Segoe UI", 16F, System.Drawing.FontStyle.Bold);
+            this.lblLogo.ForeColor = System.Drawing.Color.White;
+            this.lblLogo.Location = new System.Drawing.Point(25, 30);
+            this.lblLogo.Name = "lblLogo";
+            this.lblLogo.Size = new System.Drawing.Size(137, 30);
+            this.lblLogo.TabIndex = 0;
+            this.lblLogo.Text = "ControlTech";
             // 
             // pnlTop
             // 
@@ -156,6 +156,7 @@ namespace InventarioTI.UI
             this.pnlSidebar.PerformLayout();
             this.pnlTop.ResumeLayout(false);
             this.ResumeLayout(false);
+
         }
         #endregion
 

@@ -167,11 +167,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\gustavo.vveloso\\OneDrive - SENAC - SP\\Documentos\\InventarioTI\\InventarioTI.Infrastructure\\InventarioTI.Infrastructure.csproj",
+      "projectUniqueName": "C:\\Users\\gustavo.vveloso\\source\\repos\\Suave\\InventarioTI.Infrastructure\\InventarioTI.Infrastructure.csproj",
       "projectName": "InventarioTI.Infrastructure",
-      "projectPath": "C:\\Users\\gustavo.vveloso\\OneDrive - SENAC - SP\\Documentos\\InventarioTI\\InventarioTI.Infrastructure\\InventarioTI.Infrastructure.csproj",
+      "projectPath": "C:\\Users\\gustavo.vveloso\\source\\repos\\Suave\\InventarioTI.Infrastructure\\InventarioTI.Infrastructure.csproj",
       "packagesPath": "C:\\Users\\gustavo.vveloso\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\gustavo.vveloso\\OneDrive - SENAC - SP\\Documentos\\InventarioTI\\InventarioTI.Infrastructure\\obj\\",
+      "outputPath": "C:\\Users\\gustavo.vveloso\\source\\repos\\Suave\\InventarioTI.Infrastructure\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -193,11 +193,11 @@
         "net472": {
           "targetAlias": "net472",
           "projectReferences": {
-            "C:\\Users\\gustavo.vveloso\\OneDrive - SENAC - SP\\Documentos\\InventarioTI\\InventarioTI.Application\\InventarioTI.Application.csproj": {
-              "projectPath": "C:\\Users\\gustavo.vveloso\\OneDrive - SENAC - SP\\Documentos\\InventarioTI\\InventarioTI.Application\\InventarioTI.Application.csproj"
+            "C:\\Users\\gustavo.vveloso\\source\\repos\\Suave\\InventarioTI.Application\\InventarioTI.Application.csproj": {
+              "projectPath": "C:\\Users\\gustavo.vveloso\\source\\repos\\Suave\\InventarioTI.Application\\InventarioTI.Application.csproj"
             },
-            "C:\\Users\\gustavo.vveloso\\OneDrive - SENAC - SP\\Documentos\\InventarioTI\\InventarioTI.Domain\\InventarioTI.Domain.csproj": {
-              "projectPath": "C:\\Users\\gustavo.vveloso\\OneDrive - SENAC - SP\\Documentos\\InventarioTI\\InventarioTI.Domain\\InventarioTI.Domain.csproj"
+            "C:\\Users\\gustavo.vveloso\\source\\repos\\Suave\\InventarioTI.Domain\\InventarioTI.Domain.csproj": {
+              "projectPath": "C:\\Users\\gustavo.vveloso\\source\\repos\\Suave\\InventarioTI.Domain\\InventarioTI.Domain.csproj"
             }
           }
         }
