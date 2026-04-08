@@ -23,10 +23,9 @@ namespace InventarioTI.UI.UserControls
                 if (dgvFuncionarios.Columns.Count > 0)
                 {
                     dgvFuncionarios.Columns["NomeComSetor"].Visible = false;
-                    dgvFuncionarios.Columns["SetorNome"].Visible = false;
+                    dgvFuncionarios.Columns["NomeSetor"].Visible = false;
                     dgvFuncionarios.Columns["Localizacao"].Visible = false;
-                    dgvFuncionarios.Columns["ResumoSetor"].HeaderText = "Setor (Andar)";
-                    dgvFuncionarios.Columns["ResumoSetor"].Width = 200;
+                    
                 }
             } catch { }
         }

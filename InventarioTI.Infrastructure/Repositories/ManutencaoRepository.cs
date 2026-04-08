@@ -66,43 +66,6 @@ namespace InventarioTI.Infrastructure.Repositories
             return lista;
         }
 
-        public List<Manutencao> ListarPorEquipamento(int equipamentoId)
-        {
-            var lista = new List<Manutencao>();
-
-            using var conn = _connection.GetConnection();
-            conn.Open();
-
-            string sql = @"
-                SELECT 
-                    M.Registro_Manutencao, M.ID_Funcionario, M.ID_Equipamento, 
-                    M.Data_Manutencao, M.Descricao,
-                    F.Nome AS NomeFuncionario,
-                    E.Nome_Equipamento AS NomeEquipamento
-                FROM dbo.MANUTENCAO M
-                INNER JOIN dbo.FUNCIONARIOS F ON M.ID_Funcionario = F.ID_Funcionario
-                INNER JOIN dbo.EQUIPAMENTOS E ON M.ID_Equipamento = E.ID_Equipamento
-                WHERE M.ID_Equipamento = @EquipamentoId";
-
-            using var cmd = new SqlCommand(sql, conn);
-            cmd.Parameters.AddWithValue("@EquipamentoId", equipamentoId);
-            using var reader = cmd.ExecuteReader();
-
-            while (reader.Read())
-            {
-                lista.Add(new Manutencao
-                {
-                    Registro_Manutencao = (int)reader["Registro_Manutencao"],
-                    ID_Funcionario = reader["ID_Funcionario"] != DBNull.Value ? (int)reader["ID_Funcionario"] : 0,
-                    ID_Equipamento = reader["ID_Equipamento"] != DBNull.Value ? (int)reader["ID_Equipamento"] : 0,
-                    Data_Manutencao = reader["Data_Manutencao"] != DBNull.Value ? (DateTime)reader["Data_Manutencao"] : DateTime.MinValue,
-                    Descricao = reader["Descricao"].ToString(),
-                    NomeFuncionario = reader["NomeFuncionario"] != DBNull.Value ? reader["NomeFuncionario"].ToString() : "N/D",
-                    NomeEquipamento = reader["NomeEquipamento"] != DBNull.Value ? reader["NomeEquipamento"].ToString() : "N/D"
-                });
-            }
-            conn.Close();
-            return lista;
-        }
+    
     }
 }

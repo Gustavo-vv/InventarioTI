@@ -21,6 +21,10 @@ namespace InventarioTI.UI
                 btnMenuFuncionarios.Visible = false;
                 // Exemplo: O usuário comum não acessa o "Painel de RH"
             }
+            else
+            {
+                btnMenuFuncionarios.Visible = true;
+            }
             
         }
 

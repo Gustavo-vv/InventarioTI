@@ -9,8 +9,8 @@ namespace InventarioTI.Application.Services
     {
         private readonly IManutencaoRepository _repository;
 
-        // Regra de negócio: ID fixo do Técnico padrão
-        private const int TECNICO_PADRAO_ID = 4;
+        
+        
 
         public ManutencaoService(IManutencaoRepository repository)
         {
@@ -25,11 +25,7 @@ namespace InventarioTI.Application.Services
             if (manutencao.ID_Equipamento <= 0)
                 throw new Exception("Equipamento inválido.");
 
-            // Atribui o técnico padrão se não vier preenchido
-            if (manutencao.ID_Funcionario <= 0)
-            {
-                manutencao.ID_Funcionario = TECNICO_PADRAO_ID;
-            }
+            
 
             _repository.Adicionar(manutencao);
         }
@@ -39,13 +35,7 @@ namespace InventarioTI.Application.Services
             return _repository.Listar();
         }
 
-        public List<Manutencao> ListarPorEquipamento(int equipamentoId)
-        {
-            if (equipamentoId <= 0)
-                throw new Exception("ID do equipamento inválido.");
-
-            return _repository.ListarPorEquipamento(equipamentoId);
-        }
+        
 
 
     }

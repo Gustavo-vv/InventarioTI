@@ -21,7 +21,7 @@ namespace InventarioTI.Application.Services
             var usuario = _repository.Autenticar(login, senha);
             if (usuario == null)
             {
-                throw new Exception("Login bloqueado: Acesso negado. Usuário ou senha incorretos.");
+                throw new Exception("Usuário ou senha incorretos.");
             }
 
             return usuario;
