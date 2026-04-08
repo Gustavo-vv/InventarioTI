@@ -90,6 +90,11 @@ namespace InventarioTI.Infrastructure.Repositories
             using var conn = _connection.GetConnection();
             conn.Open();
 
+            string sqlManutencao = "DELETE FROM dbo.MANUTENCAO WHERE ID_Equipamento = @Id";
+            using var cmdManutencao = new SqlCommand(sqlManutencao, conn);
+            cmdManutencao.Parameters.AddWithValue("@Id", id);
+            cmdManutencao.ExecuteNonQuery();
+
             string sql = "DELETE FROM EQUIPAMENTOS WHERE ID_Equipamento = @Id";
 
             using var cmd = new SqlCommand(sql, conn);
